@@ -49,6 +49,13 @@ export type IconKey =
   | 'react'
   | 'sql'
   | 'git'
+  | 'pandas'
+  | 'nltk'
+  | 'imbalearn'
+  | 'surprise'
+  | 'vite'
+  | 'jupyter'
+  | 'ultralytics'
 
 export type ReplicaLine =
   | string
@@ -430,23 +437,26 @@ export const windowBlueprints: Record<CommandKey, WindowDescriptor[]> = {
       terminalReplica: true,
       lines: [
         { text: 'Python', className: 'accent-body', icon: 'python' },
-        { text: 'Machine Learning', className: 'accent-body', icon: 'machinelearning' },
-        { text: 'Deep Learning', className: 'accent-body', icon: 'deeplearning' },
-        { text: 'NLP', className: 'accent-body', icon: 'nlp' },
-        { text: 'Computer Vision', className: 'accent-body', icon: 'computerVision' },
-        { text: 'IndoBERT', className: 'accent-body', icon: 'indobert' },
-        { text: 'YOLOv8', className: 'accent-body', icon: 'yolov8' },
         { text: 'PyTorch', className: 'accent-body', icon: 'pytorch' },
         { text: 'Scikit-learn', className: 'accent-body', icon: 'scikitlearn' },
-        { text: 'HuggingFace', className: 'accent-body', icon: 'huggingface' },
-        { text: 'Recommendation Systems', className: 'accent-body', icon: 'recommendation' },
+        { text: 'OpenCV', className: 'accent-body', icon: 'opencv' },
+        { text: 'Hugging Face Transformers', className: 'accent-body', icon: 'huggingface' },
+        { text: 'Ultralytics YOLO', className: 'accent-body', icon: 'ultralytics' },
+        { text: 'Pandas', className: 'accent-body', icon: 'pandas' },
+        { text: 'NumPy', className: 'accent-body', icon: 'numpy' },
+        { text: 'NLTK', className: 'accent-body', icon: 'nltk' },
+        { text: 'Imbalanced-learn', className: 'accent-body', icon: 'imbalearn' },
+        { text: 'Surprise', className: 'accent-body', icon: 'surprise' },
         { text: 'Streamlit', className: 'accent-body', icon: 'streamlit' },
         { text: 'FastAPI', className: 'accent-body', icon: 'fastapi' },
         { text: 'Docker', className: 'accent-body', icon: 'docker' },
         { text: 'React.js', className: 'accent-body', icon: 'react' },
+        { text: 'Vite', className: 'accent-body', icon: 'vite' },
         { text: 'Tailwind CSS', className: 'accent-body', icon: 'tailwind' },
-        { text: 'SQL', className: 'accent-body', icon: 'sql' },
-        { text: 'Git', className: 'accent-body', icon: 'git' }
+        { text: 'Git', className: 'accent-body', icon: 'git' },
+        { text: 'GitHub', className: 'accent-body', icon: 'github' },
+        { text: 'Jupyter Notebook', className: 'accent-body', icon: 'jupyter' },
+        { text: 'Vercel', className: 'accent-body', icon: 'vercel' }
       ]
     }
   ],
@@ -519,15 +529,15 @@ export const PROJECT_LINK_BLUEPRINTS: ProjectLinkBlueprint[] = [
 export const ICON_GLYPHS: Record<IconKey, string> = {
   github: `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.7.08-.69.08-.69 1.15.08 1.76 1.19 1.76 1.19 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.68 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.45.11-3.01 0 0 .96-.31 3.15 1.18a10.7 10.7 0 0 1 5.74 0c2.2-1.49 3.15-1.18 3.15-1.18.62 1.56.23 2.72.11 3.01.73.81 1.18 1.85 1.18 3.11 0 4.41-2.71 5.39-5.29 5.67.41.35.78 1.04.78 2.1 0 1.52-.01 2.75-.01 3.13 0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>`,
   huggingface: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="24" fill="#FFCC4D"/><path d="M14 34c3.5 9 11.5 14 18 14s14.5-5 18-14" fill="none" stroke="#F28A1A" stroke-width="4" stroke-linecap="round"/><circle cx="24" cy="28" r="3" fill="#3C2C1E"/><circle cx="40" cy="28" r="3" fill="#3C2C1E"/><path d="M24 38c2.5 3 5.5 4 8 4s5.5-1 8-4" fill="none" stroke="#A04F15" stroke-width="3" stroke-linecap="round"/></svg>`,
-  vercel: '▲',
+  vercel: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M4 56h56L32 8 4 56z" fill="#ffffff"/></svg>`,
   netlify: '🌀',
   generic: '🌐',
   document: '📄',
   pytorch: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path fill="#EE4C2C" d="M32 6l12 14a14 14 0 1 1-20 0z"/><circle cx="40" cy="36" r="10" fill="none" stroke="#EE4C2C" stroke-width="4"/></svg>`,
   resnet: '🧠',
   yolov8: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="20" fill="none" stroke="#FB7185" stroke-width="4"/><circle cx="32" cy="32" r="6" fill="#FB7185"/><line x1="32" y1="10" x2="32" y2="18" stroke="#FB7185" stroke-width="4" stroke-linecap="round"/><line x1="32" y1="46" x2="32" y2="54" stroke="#FB7185" stroke-width="4" stroke-linecap="round"/><line x1="10" y1="32" x2="18" y2="32" stroke="#FB7185" stroke-width="4" stroke-linecap="round"/><line x1="46" y1="32" x2="54" y2="32" stroke="#FB7185" stroke-width="4" stroke-linecap="round"/></svg>`,
-  opencv: '🎥',
-  numpy: '🧮',
+  opencv: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="24" cy="18" r="12" fill="#ff1b2d"/><circle cx="40" cy="18" r="12" fill="#00a04e"/><circle cx="32" cy="38" r="12" fill="#0068fd"/><circle cx="24" cy="18" r="6" fill="#010409"/><circle cx="40" cy="18" r="6" fill="#010409"/><circle cx="32" cy="38" r="6" fill="#010409"/></svg>`,
+  numpy: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path fill="#4dabcf" d="M10 16h12v36H10z"/><path fill="#133c7a" d="M22 16h10l20 36H42z" opacity="0.9"/><path fill="#f6c55c" d="M32 16h12v36H32z"/></svg>`,
   fastapi: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path fill="#059669" d="M32 6l20 12v24L32 54 12 42V18z"/><path fill="#ECFDF5" d="M38 18 28 46h8l8-28z"/></svg>`,
   python: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path fill="#3776AB" d="M32 6c-7.2 0-13 5.8-13 13v9h26v-9c0-7.2-5.8-13-13-13z"/><circle cx="40" cy="16" r="3" fill="#fff"/><path fill="#FFD43B" d="M32 58c7.2 0 13-5.8 13-13v-9H19v9c0 7.2 5.8 13 13 13z"/><circle cx="24" cy="48" r="3" fill="#fff"/></svg>`,
   stateless: '🛰️',
@@ -544,10 +554,17 @@ export const ICON_GLYPHS: Record<IconKey, string> = {
   indobert: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="8" y="16" width="48" height="12" fill="#CE1126"/><rect x="8" y="28" width="48" height="20" fill="#fff"/><text x="32" y="46" text-anchor="middle" font-family="'Space Mono', 'IBM Plex Mono', monospace" font-size="14" fill="#111827">BERT</text></svg>`,
   streamlit: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M14 46 32 12l18 34H14z" fill="#FF4B4B"/></svg>`,
   recommendation: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="16" cy="20" r="6" fill="#FBBF24"/><circle cx="48" cy="20" r="6" fill="#F97316"/><circle cx="32" cy="44" r="8" fill="#F59E0B"/><line x1="16" y1="20" x2="32" y2="44" stroke="#EA580C" stroke-width="4" stroke-linecap="round"/><line x1="48" y1="20" x2="32" y2="44" stroke="#EA580C" stroke-width="4" stroke-linecap="round"/></svg>`,
-  scikitlearn: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="20" fill="#F89939"/><text x="32" y="39" text-anchor="middle" font-family="'Space Mono', 'IBM Plex Mono', monospace" font-size="16" fill="#fff">sk</text></svg>`,
+  scikitlearn: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="20" fill="#F7991C"/><path d="M23 25h6v14h-6z" fill="#fff"/><path d="M32 25h6l3 6 3-6h6l-6 14h-6z" fill="#224056"/></svg>`,
   react: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="#61DAFB" stroke-width="3"><ellipse cx="32" cy="32" rx="18" ry="8"/><ellipse cx="32" cy="32" rx="18" ry="8" transform="rotate(60 32 32)"/><ellipse cx="32" cy="32" rx="18" ry="8" transform="rotate(-60 32 32)"/></g><circle cx="32" cy="32" r="4" fill="#61DAFB"/></svg>`,
   sql: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><ellipse cx="32" cy="18" rx="16" ry="6" fill="#0EA5E9"/><rect x="16" y="18" width="32" height="22" fill="#0284C7"/><ellipse cx="32" cy="40" rx="16" ry="6" fill="#0369A1"/><text x="32" y="34" text-anchor="middle" font-family="'Space Mono', 'IBM Plex Mono', monospace" font-size="12" fill="#fff">SQL</text></svg>`,
-  git: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M12 32 32 12l20 20-20 20z" fill="#F1502F"/><path d="M24 32h8v-8m0 8v8m8-8h8" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="24" r="3" fill="#fff"/><circle cx="32" cy="40" r="3" fill="#fff"/><circle cx="48" cy="32" r="3" fill="#fff"/></svg>`
+  git: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M12 32 32 12l20 20-20 20z" fill="#F1502F"/><path d="M24 32h8v-8m0 8v8m8-8h8" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="24" r="3" fill="#fff"/><circle cx="32" cy="40" r="3" fill="#fff"/><circle cx="48" cy="32" r="3" fill="#fff"/></svg>`,
+  pandas: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="18" y="10" width="6" height="44" rx="3" fill="#1b152b"/><rect x="30" y="10" width="6" height="44" rx="3" fill="#8a3ffc"/><rect x="42" y="18" width="6" height="28" rx="3" fill="#ff70d9"/></svg>`,
+  nltk: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M8 20h48v28H8z" fill="#fefefe" stroke="#0f172a" stroke-width="2"/><path d="M8 20h24v28H8z" fill="#e8f5e9"/><path d="M24 30c4-6 12-12 24-12-4 6-12 12-24 12z" fill="#34a853"/><path d="M24 34c4 2 11 6 12 12-4-2-11-6-12-12z" fill="#1b5e20"/></svg>`,
+  imbalearn: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><line x1="32" y1="14" x2="32" y2="50" stroke="#0f766e" stroke-width="4" stroke-linecap="round"/><circle cx="18" cy="30" r="8" fill="#14b8a6" opacity="0.9"/><circle cx="46" cy="34" r="8" fill="#22d3ee" opacity="0.9"/><path d="M12 42c6-6 34-8 40-2" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/></svg>`,
+  surprise: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="32 6 38 24 58 24 42 36 48 54 32 43 16 54 22 36 6 24 26 24" fill="#f97316"/><circle cx="32" cy="32" r="6" fill="#fff"/></svg>`,
+  vite: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M12 12 32 56l20-44H12z" fill="#ffd166"/><path d="M52 12 32 56 26 42l14-30h12z" fill="#8a4bff" opacity="0.9"/></svg>`,
+  jupyter: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><ellipse cx="32" cy="24" rx="18" ry="8" fill="#f97316" opacity="0.7"/><ellipse cx="32" cy="40" rx="18" ry="8" fill="#f97316" opacity="0.7"/><circle cx="16" cy="12" r="4" fill="#9ca3af"/><circle cx="48" cy="52" r="4" fill="#9ca3af"/></svg>`,
+  ultralytics: `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M14 12h12v24c0 8 4 14 10 14s10-6 10-14V12h12v24c0 16-10 28-22 28S14 52 14 36z" fill="#ffbf00" stroke="#1f1300" stroke-width="2"/></svg>`
 }
 
 export function deriveDemoIconKey(url: string): IconKey {
